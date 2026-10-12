@@ -108,7 +108,7 @@ class Mix:
     def write(self, path):
         x = self.buf
         peak = np.abs(x).max() or 1.0
-        x = x / peak * 0.92
+        x = x / peak * 0.84          # a little headroom: inter-sample peaks stay under 0 dBFS
         pcm = (x * 32767.0).astype("<i2")
         os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
         with wave.open(path, "wb") as w:
