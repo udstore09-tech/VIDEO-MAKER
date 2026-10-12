@@ -90,6 +90,16 @@ gets louder when they run and drops out when B fake-cries.
 | retime a gag | the constants at the top of each `beatN()` in `story.py` |
 | colour | nothing — it is deliberately monochrome (see below) |
 
+## Review
+
+```
+python preview.py --port 8080      # serves ./output with byte ranges -> open http://localhost:8080
+```
+
+A player page for the finished film: chapter buttons for every gag, frame stepping
+(`,` / `.`), a time+frame readout, and links to the model sheet and the raw audio.
+It only serves `output/` — the source and `.git` stay private, dotfiles 404.
+
 Render flags: `--crf 16` for a finer file, `--preset slower` for a smaller one,
 `--upto 15` to render half while checking.
 
