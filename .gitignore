@@ -1,0 +1,5 @@
+# output/ holds renders, caches and review strips — all regenerable
+output/
+__pycache__/
+*.pyc
+.venv/
